@@ -55,6 +55,7 @@ button:active {
 }
 </style>
 </head>
+
 <body>
 
 <div id="grid" class="grid"></div>
@@ -70,18 +71,15 @@ for (let row = 0; row < 9; row++) {
         const cell = document.createElement("div");
         cell.classList.add("cell");
 
-        // Buitenrand
         if (row === 0) cell.style.borderTop = "3px solid black";
         if (row === 8) cell.style.borderBottom = "3px solid black";
         if (col === 0) cell.style.borderLeft = "3px solid black";
         if (col === 8) cell.style.borderRight = "3px solid black";
 
-        // Verticale 3×3 scheidingen
         if (col === 2 || col === 5) {
             cell.style.borderRight = "3px solid black";
         }
 
-        // Horizontale 3×3 scheidingen
         if (row === 2 || row === 5) {
             cell.style.borderBottom = "3px solid black";
         }
